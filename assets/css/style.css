@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Markazi+Text:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap");
+@font-face {
+  font-family: 'Uthman Naskh';
+  src: local("KFGQPC Uthman Taha Naskh"), url(https://cdn.rawgit.com/mustafa0x/qpc-fonts/f93bf5f3/various-woff2/UthmanTN1%20Ver10.woff2) format("woff2"), url(https://cdn.rawgit.com/mustafa0x/qpc-fonts/f93bf5f3/various-woff/UthmanTN1%20Ver10.woff) format("woff");
+}
+
+:root {
+  --clr-black: #1c1c1c;
+  --clr-blue: #3690FF;
+  --clr-yellow: #ffc600;
+  --clr-white: #ffffff;
+  --heading-font: 'Poppins', sans-serif;
+  --bengali-font: 'Hind Siliguri', sans-serif;
+  --arabic-font: 'Uthman Naskh','Markazi Text', serif;
+}
+
+::selection {
+  background: var(--clr-blue);
+  color: var(--clr-blue);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden; /* Hide scrollbars */
+  font-weight: 400;
+  background: var(--clr-blue);
+  color: var(--clr-black);
+  font-family: var(--heading-font);
+}
+
+
+a,
+span {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn, main .container .buttons .twitter-share, main .container .buttons .btn-play, main .btn-generate {
+  font-size: 16px;
+  padding: .3rem 0.75rem;
+  border-radius: 20px;
+  font-family: var(--heading-font);
+  transition: .2s;
+}
+
+.btn:active, main .container .buttons .twitter-share:active, main .container .buttons .btn-play:active, main .btn-generate:active {
+  transform: scale(0.95);
+}
+
+/* Main Styles */
+main {
+  text-align: center;
+  padding: 25px 0;
+}
+
+main .heading h1 {
+  margin-bottom: 10px;
+}
+
+main .heading p a {
+  color: var(--clr-black);
+  text-decoration: underline;
+}
+
+main .heading p a:hover {
+  text-decoration: none;
+}
+
+main .btn-play,
+main .bangla-ayah,
+main .arabic-ayah,
+main .sura-info {
+  margin-top: 25px;
+
+
+}
+
+main .container {
+  position: relative;
+  left: 50%;
+  margin: 200px 0;
+  transform: translateX(-50%);
+  background: var(--clr-white);
+  width: 700px;
+  max-height: 700px;
+  border-radius: 10px;
+  text-align: center;
+  padding: 20px 20px;
+  box-shadow: 0px 0px 5px 0px rgba(28, 28, 28, 0.3);
+ 
+
+}
+
+main .container .bangla-ayah {
+  font-family: var(--bengali-font);
+  font-weight: 600;
+
+}
+
+main .container .arabic-ayah {
+  font-family: var(--arabic-font);
+  font-weight: 600;
+}
+
+main .container .sura-info {
+  font-family: var(--bengali-font);
+}
+
+main .container .buttons i {
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+main .container .buttons .twitter-share {
+  color: var(--clr-blue);
+  font-size: 16px;
+  margin-right: 15px;
+}
+
+main .container .buttons .twitter-share i {
+  font-size: 22px;
+}
+
+main .container .buttons .twitter-share:hover {
+  background-color: rgba(54, 144, 255, 0.2);
+}
+
+main .container .buttons .btn-play {
+  color: var(--clr-black);
+  background: var(--clr-yellow);
+}
+
+main .container .buttons .btn-play:hover {
+  box-shadow: 0px 0px 5px 0px rgba(28, 28, 28, 0.3);
+}
+
+main .btn-generate {
+  background: var(--clr-black);
+  color: var(--clr-yellow);
+  box-shadow: 0px 0px 10px 0px rgba(28, 28, 28, 0.3);
+}
+
+main .btn-generate i {
+  margin-right: 5px;
+  transform: rotate(0);
+  animation: spin 1.3s linear infinite;
+  animation-play-state: running;
+}
+
+main .btn-generate:hover i {
+  animation-play-state: paused;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* SM Small Device :550px. */
+@media only screen and (max-width: 600px) {
+  .heading h1 {
+    font-size: 28px;
+  }
+  main .container {
+    margin-right: 50px;
+  }
+}
