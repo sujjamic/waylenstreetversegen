@@ -28,7 +28,7 @@
 body {
   overflow: hidden; /* Hide scrollbars */
   font-weight: 400;
-  background: var(--clr-blue);
+  background: var(--clr-black);
   color: var(--clr-black);
   font-family: var(--heading-font);
 }
@@ -86,7 +86,7 @@ main .container {
   margin: 200px 0;
   transform: translateX(-50%);
   background: var(--clr-white);
-  width: 700px;
+  width: 1000px;
   max-height: 700px;
   border-radius: 10px;
   text-align: center;
@@ -98,6 +98,7 @@ main .container {
 
 main .container .bangla-ayah {
   font-family: var(--bengali-font);
+  font-size
   font-weight: 600;
 
 }
@@ -105,10 +106,12 @@ main .container .bangla-ayah {
 main .container .arabic-ayah {
   font-family: var(--arabic-font);
   font-weight: 600;
+  font-size: 32px;
 }
 
 main .container .sura-info {
   font-family: var(--bengali-font);
+  font-size: 32px;
 }
 
 main .container .buttons i {
