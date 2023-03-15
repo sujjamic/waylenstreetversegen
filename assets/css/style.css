@@ -83,7 +83,7 @@ main .sura-info {
 main .container {
   position: relative;
   left: 50%;
-  margin: 100px 0;
+  margin: 80px 0;
   transform: translateX(-50%);
   background: var(--clr-white);
   width: 1000px;
